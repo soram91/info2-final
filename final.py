@@ -10,14 +10,11 @@ class Player:
         self.move_speed = 5
 
     def pmove(self):
-        if pyxel.btn(pyxel.KEY_LEFT): #左端を通り過ぎないようにする
-            self.px -= self.move_speed
-            if self.px < 0:
-                self.px = 0
-        if pyxel.btn(pyxel.KEY_RIGHT):  #右端を通り過ぎないようにする
-            self.px += self.move_speed
-            if self.px > self.field_width:
-                self.px = self.field_width
+        self.px = pyxel.mouse_x
+        if self.px < 0:
+            self.px = 0
+        if self.px > self.field_width:
+            self.px = self.field_width
 
 class Bullet:
     def __init__(self, player_x, field_height):
