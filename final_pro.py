@@ -1,7 +1,7 @@
 import pyxel
 
 class Player:
-    def __init__(self, field_width, field_height):  #Playerの初期化   
+    def __init__(self, field_width, field_height):  #Playerの初期化   #init(width, height, [title], [fps], [quit_key], [display_scale], [capture_scale], [capture_sec]
         self.field_width = field_width
         self.px = field_width / 2    #px, py: 初期位置
         self.py = field_height - 12
